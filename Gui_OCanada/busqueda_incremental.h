@@ -15,7 +15,11 @@ public:
     explicit Busqueda_Incremental(QWidget *parent = nullptr);
     ~Busqueda_Incremental();
 
-private:
+private slots:
+
+    void on_back_clicked();
+
+public:
     Ui::Busqueda_Incremental *ui;
 };
 

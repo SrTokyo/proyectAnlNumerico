@@ -19,8 +19,6 @@ void MainWindow::on_bt_Busqueda_Incremental_clicked()
 {
     Busqueda_Incremental *w = new Busqueda_Incremental;
     w->show();
-    this->hide();
-
 }
 
 void MainWindow::on_bt_Metodos_Cerrados_clicked()

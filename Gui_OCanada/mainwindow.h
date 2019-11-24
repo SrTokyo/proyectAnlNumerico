@@ -31,7 +31,7 @@ private slots:
 
     void on_bt_Metodos_Interpolacion_clicked();
 
-private:
+public:
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H

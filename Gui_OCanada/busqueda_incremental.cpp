@@ -12,3 +12,10 @@ Busqueda_Incremental::~Busqueda_Incremental()
 {
     delete ui;
 }
+
+void Busqueda_Incremental::on_back_clicked()
+{
+    this->close();
+}
+
+
