@@ -25,49 +25,49 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="bt_Busqueda_Incremental">
        <property name="text">
         <string>Busqueda incremental</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="bt_Metodos_Cerrados">
        <property name="text">
         <string>Metodos cerrados</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="bt_Metodos_Abiertos">
        <property name="text">
         <string>Metodos abiertos</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="bt_Eliminacion_Gaussiana">
        <property name="text">
         <string>Eliminacion Gaussiana</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="bt_Metodos_Factorizacion">
        <property name="text">
         <string>Metodos de factorización</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="bt_Metodos_Iterativos">
        <property name="text">
         <string>Metodos Iterativos</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_7">
+      <widget class="QPushButton" name="bt_Metodos_Interpolacion">
        <property name="text">
         <string>Metodos Interpolacion</string>
        </property>

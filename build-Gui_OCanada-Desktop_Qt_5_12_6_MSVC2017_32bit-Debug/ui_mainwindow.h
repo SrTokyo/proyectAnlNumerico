@@ -25,13 +25,13 @@ public:
     QWidget *centralwidget;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
-    QPushButton *pushButton_5;
-    QPushButton *pushButton_6;
-    QPushButton *pushButton_7;
+    QPushButton *bt_Busqueda_Incremental;
+    QPushButton *bt_Metodos_Cerrados;
+    QPushButton *bt_Metodos_Abiertos;
+    QPushButton *bt_Eliminacion_Gaussiana;
+    QPushButton *bt_Metodos_Factorizacion;
+    QPushButton *bt_Metodos_Iterativos;
+    QPushButton *bt_Metodos_Interpolacion;
     QLabel *label;
 
     void setupUi(QMainWindow *MainWindow)
@@ -47,40 +47,40 @@ public:
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        pushButton = new QPushButton(verticalLayoutWidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        bt_Busqueda_Incremental = new QPushButton(verticalLayoutWidget);
+        bt_Busqueda_Incremental->setObjectName(QString::fromUtf8("bt_Busqueda_Incremental"));
 
-        verticalLayout->addWidget(pushButton);
+        verticalLayout->addWidget(bt_Busqueda_Incremental);
 
-        pushButton_2 = new QPushButton(verticalLayoutWidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        bt_Metodos_Cerrados = new QPushButton(verticalLayoutWidget);
+        bt_Metodos_Cerrados->setObjectName(QString::fromUtf8("bt_Metodos_Cerrados"));
 
-        verticalLayout->addWidget(pushButton_2);
+        verticalLayout->addWidget(bt_Metodos_Cerrados);
 
-        pushButton_3 = new QPushButton(verticalLayoutWidget);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        bt_Metodos_Abiertos = new QPushButton(verticalLayoutWidget);
+        bt_Metodos_Abiertos->setObjectName(QString::fromUtf8("bt_Metodos_Abiertos"));
 
-        verticalLayout->addWidget(pushButton_3);
+        verticalLayout->addWidget(bt_Metodos_Abiertos);
 
-        pushButton_4 = new QPushButton(verticalLayoutWidget);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        bt_Eliminacion_Gaussiana = new QPushButton(verticalLayoutWidget);
+        bt_Eliminacion_Gaussiana->setObjectName(QString::fromUtf8("bt_Eliminacion_Gaussiana"));
 
-        verticalLayout->addWidget(pushButton_4);
+        verticalLayout->addWidget(bt_Eliminacion_Gaussiana);
 
-        pushButton_5 = new QPushButton(verticalLayoutWidget);
-        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
+        bt_Metodos_Factorizacion = new QPushButton(verticalLayoutWidget);
+        bt_Metodos_Factorizacion->setObjectName(QString::fromUtf8("bt_Metodos_Factorizacion"));
 
-        verticalLayout->addWidget(pushButton_5);
+        verticalLayout->addWidget(bt_Metodos_Factorizacion);
 
-        pushButton_6 = new QPushButton(verticalLayoutWidget);
-        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
+        bt_Metodos_Iterativos = new QPushButton(verticalLayoutWidget);
+        bt_Metodos_Iterativos->setObjectName(QString::fromUtf8("bt_Metodos_Iterativos"));
 
-        verticalLayout->addWidget(pushButton_6);
+        verticalLayout->addWidget(bt_Metodos_Iterativos);
 
-        pushButton_7 = new QPushButton(verticalLayoutWidget);
-        pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
+        bt_Metodos_Interpolacion = new QPushButton(verticalLayoutWidget);
+        bt_Metodos_Interpolacion->setObjectName(QString::fromUtf8("bt_Metodos_Interpolacion"));
 
-        verticalLayout->addWidget(pushButton_7);
+        verticalLayout->addWidget(bt_Metodos_Interpolacion);
 
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
@@ -96,13 +96,13 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "O'Canada Proyecto Analisis Numerico", nullptr));
-        pushButton->setText(QApplication::translate("MainWindow", "Busqueda incremental", nullptr));
-        pushButton_2->setText(QApplication::translate("MainWindow", "Metodos cerrados", nullptr));
-        pushButton_3->setText(QApplication::translate("MainWindow", "Metodos abiertos", nullptr));
-        pushButton_4->setText(QApplication::translate("MainWindow", "Eliminacion Gaussiana", nullptr));
-        pushButton_5->setText(QApplication::translate("MainWindow", "Metodos de factorizaci\303\263n", nullptr));
-        pushButton_6->setText(QApplication::translate("MainWindow", "Metodos Iterativos", nullptr));
-        pushButton_7->setText(QApplication::translate("MainWindow", "Metodos Interpolacion", nullptr));
+        bt_Busqueda_Incremental->setText(QApplication::translate("MainWindow", "Busqueda incremental", nullptr));
+        bt_Metodos_Cerrados->setText(QApplication::translate("MainWindow", "Metodos cerrados", nullptr));
+        bt_Metodos_Abiertos->setText(QApplication::translate("MainWindow", "Metodos abiertos", nullptr));
+        bt_Eliminacion_Gaussiana->setText(QApplication::translate("MainWindow", "Eliminacion Gaussiana", nullptr));
+        bt_Metodos_Factorizacion->setText(QApplication::translate("MainWindow", "Metodos de factorizaci\303\263n", nullptr));
+        bt_Metodos_Iterativos->setText(QApplication::translate("MainWindow", "Metodos Iterativos", nullptr));
+        bt_Metodos_Interpolacion->setText(QApplication::translate("MainWindow", "Metodos Interpolacion", nullptr));
         label->setText(QApplication::translate("MainWindow", "                     \302\241\302\241 Bienvenidos !!\n"
 "       Selecione un metodo por favor.", nullptr));
     } // retranslateUi

@@ -16,13 +16,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    busqueda_incremental.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    busqueda_incremental.h \
     mainwindow.h
 
 FORMS += \
+    busqueda_incremental.ui \
     mainwindow.ui
 
 # Default rules for deployment.
