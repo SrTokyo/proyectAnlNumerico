@@ -17,16 +17,46 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     busqueda_incremental.cpp \
+    doolittle.cpp \
+    eliminacion_gaussiana.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    menu_cholesky.cpp \
+    menu_crout.cpp \
+    menu_doolittle.cpp \
+    metodos_abiertos.cpp \
+    metodos_cerrados.cpp \
+    metodos_factorizacion.cpp \
+    metodos_interpolacion.cpp \
+    metodos_iterativos.cpp
 
 HEADERS += \
     busqueda_incremental.h \
-    mainwindow.h
+    doolittle.h \
+    eliminacion_gaussiana.h \
+    mainwindow.h \
+    menu_cholesky.h \
+    menu_crout.h \
+    menu_doolittle.h \
+    metodos_abiertos.h \
+    metodos_cerrados.h \
+    metodos_factorizacion.h \
+    metodos_interpolacion.h \
+    metodos_iterativos.h
 
 FORMS += \
     busqueda_incremental.ui \
-    mainwindow.ui
+    doolittle.ui \
+    eliminacion_gaussiana.ui \
+    mainwindow.ui \
+    menu_cholesky.ui \
+    menu_crout.ui \
+    menu_doolittle.ui \
+    metodos_abiertos.ui \
+    metodos_cerrados.ui \
+    metodos_factorizacion.ui \
+    metodos_interpolacion.ui \
+    metodos_iterativos.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

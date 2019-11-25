@@ -29,19 +29,6 @@
     <string>Done</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="introducir_funcion">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
-     <y>190</y>
-     <width>121</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>introducir funcion</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="back">
    <property name="geometry">
     <rect>
@@ -53,6 +40,32 @@
    </property>
    <property name="text">
     <string>back</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="intro_Termino">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>190</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Termino</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="intro_Operador">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>190</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Operador</string>
    </property>
   </widget>
  </widget>

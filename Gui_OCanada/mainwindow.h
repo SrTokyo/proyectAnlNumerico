@@ -3,6 +3,12 @@
 
 #include <QMainWindow>
 #include "busqueda_incremental.h"
+#include "metodos_cerrados.h"
+#include "metodos_abiertos.h"
+#include "metodos_factorizacion.h"
+#include "metodos_iterativos.h"
+#include "metodos_interpolacion.h"
+#include "eliminacion_gaussiana.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
