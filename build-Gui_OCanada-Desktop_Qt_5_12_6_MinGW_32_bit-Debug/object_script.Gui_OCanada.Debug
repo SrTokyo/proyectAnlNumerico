@@ -23,6 +23,7 @@ debug/punto_fijo.o
 debug/raizes_multiples.o
 debug/regla_falsa.o
 debug/secante.o
+debug/seidel.o
 debug/simple.o
 debug/moc_biseccion.o
 debug/moc_busqueda_incremental.o
@@ -42,4 +43,5 @@ debug/moc_punto_fijo.o
 debug/moc_raizes_multiples.o
 debug/moc_regla_falsa.o
 debug/moc_secante.o
+debug/moc_seidel.o
 debug/moc_simple.o

@@ -41,10 +41,10 @@ public:
     {
         if (Secante->objectName().isEmpty())
             Secante->setObjectName(QString::fromUtf8("Secante"));
-        Secante->resize(640, 497);
+        Secante->resize(640, 546);
         table_solve = new QTableWidget(Secante);
         table_solve->setObjectName(QString::fromUtf8("table_solve"));
-        table_solve->setGeometry(QRect(10, 240, 611, 241));
+        table_solve->setGeometry(QRect(10, 290, 611, 241));
         label = new QLabel(Secante);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(10, 0, 191, 21));
@@ -53,7 +53,7 @@ public:
         plainTextEdit->setGeometry(QRect(10, 20, 611, 71));
         layoutWidget = new QWidget(Secante);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 90, 161, 151));
+        layoutWidget->setGeometry(QRect(10, 90, 161, 191));
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -84,7 +84,7 @@ public:
 
         table_resoult = new QTableWidget(Secante);
         table_resoult->setObjectName(QString::fromUtf8("table_resoult"));
-        table_resoult->setGeometry(QRect(180, 100, 441, 131));
+        table_resoult->setGeometry(QRect(180, 100, 441, 181));
 
         retranslateUi(Secante);
 

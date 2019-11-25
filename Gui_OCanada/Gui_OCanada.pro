@@ -41,6 +41,7 @@ SOURCES += \
     raizes_multiples.cpp \
     regla_falsa.cpp \
     secante.cpp \
+    seidel.cpp \
     simple.cpp
 
 HEADERS += \
@@ -69,6 +70,7 @@ HEADERS += \
     raizes_multiples.h \
     regla_falsa.h \
     secante.h \
+    seidel.h \
     simple.h
 
 FORMS += \
@@ -90,6 +92,7 @@ FORMS += \
     raizes_multiples.ui \
     regla_falsa.ui \
     secante.ui \
+    seidel.ui \
     simple.ui
 
 # Default rules for deployment.

@@ -2,6 +2,7 @@
 #define METODOS_ITERATIVOS_H
 
 #include <QFrame>
+#include <seidel.h>
 
 namespace Ui {
 class Metodos_Iterativos;
