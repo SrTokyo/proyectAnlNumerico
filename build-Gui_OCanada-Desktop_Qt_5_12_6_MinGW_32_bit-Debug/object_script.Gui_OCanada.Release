@@ -6,6 +6,8 @@ release/scanner.o
 release/token.o
 release/biseccion.o
 release/busqueda_incremental.o
+release/cholsky.o
+release/crout.o
 release/doolittle.o
 release/eliminacion_gaussiana.o
 release/main.o
@@ -18,6 +20,7 @@ release/metodos_factorizacion.o
 release/metodos_interpolacion.o
 release/metodos_iterativos.o
 release/newton.o
+release/pivote_total.o
 release/pivote_parcial.o
 release/punto_fijo.o
 release/raizes_multiples.o
@@ -26,6 +29,8 @@ release/secante.o
 release/simple.o
 release/moc_biseccion.o
 release/moc_busqueda_incremental.o
+release/moc_cholsky.o
+release/moc_crout.o
 release/moc_doolittle.o
 release/moc_eliminacion_gaussiana.o
 release/moc_mainwindow.o
@@ -37,6 +42,7 @@ release/moc_metodos_factorizacion.o
 release/moc_metodos_interpolacion.o
 release/moc_metodos_iterativos.o
 release/moc_newton.o
+release/moc_pivote_total.o
 release/moc_pivote_parcial.o
 release/moc_punto_fijo.o
 release/moc_raizes_multiples.o

@@ -2,9 +2,9 @@
 #define METODOS_FACTORIZACION_H
 
 #include <QFrame>
-#include "menu_cholesky.h"
+#include "cholsky.h"
 #include "doolittle.h"
-#include "menu_crout.h"
+#include "crout.h"
 #include <QInputDialog>
 
 namespace Ui {

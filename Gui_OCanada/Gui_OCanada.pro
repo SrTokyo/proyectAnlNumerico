@@ -24,6 +24,8 @@ SOURCES += \
     analizador/token.cpp \
     biseccion.cpp \
     busqueda_incremental.cpp \
+    cholsky.cpp \
+    crout.cpp \
     doolittle.cpp \
     eliminacion_gaussiana.cpp \
     main.cpp \
@@ -54,6 +56,8 @@ HEADERS += \
     analizador/token.h \
     biseccion.h \
     busqueda_incremental.h \
+    cholsky.h \
+    crout.h \
     doolittle.h \
     eliminacion_gaussiana.h \
     mainwindow.h \
@@ -76,6 +80,8 @@ HEADERS += \
 FORMS += \
     biseccion.ui \
     busqueda_incremental.ui \
+    cholsky.ui \
+    crout.ui \
     doolittle.ui \
     eliminacion_gaussiana.ui \
     mainwindow.ui \

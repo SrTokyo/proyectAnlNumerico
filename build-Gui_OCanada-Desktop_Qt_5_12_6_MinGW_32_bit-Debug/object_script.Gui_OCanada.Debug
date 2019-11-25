@@ -6,6 +6,8 @@ debug/scanner.o
 debug/token.o
 debug/biseccion.o
 debug/busqueda_incremental.o
+debug/cholsky.o
+debug/crout.o
 debug/doolittle.o
 debug/eliminacion_gaussiana.o
 debug/main.o
@@ -18,6 +20,7 @@ debug/metodos_factorizacion.o
 debug/metodos_interpolacion.o
 debug/metodos_iterativos.o
 debug/newton.o
+debug/pivote_total.o
 debug/pivote_parcial.o
 debug/punto_fijo.o
 debug/raizes_multiples.o
@@ -26,6 +29,8 @@ debug/secante.o
 debug/simple.o
 debug/moc_biseccion.o
 debug/moc_busqueda_incremental.o
+debug/moc_cholsky.o
+debug/moc_crout.o
 debug/moc_doolittle.o
 debug/moc_eliminacion_gaussiana.o
 debug/moc_mainwindow.o
@@ -37,6 +42,7 @@ debug/moc_metodos_factorizacion.o
 debug/moc_metodos_interpolacion.o
 debug/moc_metodos_iterativos.o
 debug/moc_newton.o
+debug/moc_pivote_total.o
 debug/moc_pivote_parcial.o
 debug/moc_punto_fijo.o
 debug/moc_raizes_multiples.o

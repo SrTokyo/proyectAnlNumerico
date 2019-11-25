@@ -104,8 +104,8 @@ void Pivote_Total:: solve(){
                     }
                 }
             }
-            cont++;
             imp_etapa();
+            cont++;
         }
     }
 }

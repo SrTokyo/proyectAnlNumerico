@@ -15,8 +15,10 @@ Metodos_Factorizacion::~Metodos_Factorizacion()
 
 void Metodos_Factorizacion::on_crout_clicked()
 {
-    Menu_Crout *w = new Menu_Crout;
-    w->show();
+    int n = QInputDialog::getInt(this,"Entrada", "ingrese el valor de N * N  de la matriz");
+    Crout *s1 = new Crout;
+    s1->init(n);
+    s1->show();
 }
 
 void Metodos_Factorizacion::on_doolittle_clicked()
@@ -29,8 +31,10 @@ void Metodos_Factorizacion::on_doolittle_clicked()
 
 void Metodos_Factorizacion::on_cholesky_clicked()
 {
-    Menu_Cholesky *w = new Menu_Cholesky;
-    w->show();
+    int n = QInputDialog::getInt(this,"Entrada", "ingrese el valor de N * N  de la matriz");
+    Cholsky *s1 = new Cholsky;
+    s1->init(n);
+    s1->show();
 }
 
 void Metodos_Factorizacion::on_back_clicked()
