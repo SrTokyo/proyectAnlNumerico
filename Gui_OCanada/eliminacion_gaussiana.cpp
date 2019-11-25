@@ -28,7 +28,10 @@ void Eliminacion_Gaussiana::on_p_total_clicked()
 
 void Eliminacion_Gaussiana::on_p_parcial_clicked()
 {
-
+    int n = QInputDialog::getInt(this,"Entrada", "ingrese el valor de N * N  de la matriz");
+    Pivote_Parcial *s1 = new Pivote_Parcial;
+    s1->init(n);
+    s1->show();
 }
 
 void Eliminacion_Gaussiana::on_simple_clicked()
