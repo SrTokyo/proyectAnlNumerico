@@ -18,6 +18,7 @@ debug/metodos_factorizacion.o
 debug/metodos_interpolacion.o
 debug/metodos_iterativos.o
 debug/newton.o
+debug/pivote_total.o
 debug/pivote_parcial.o
 debug/punto_fijo.o
 debug/raizes_multiples.o
@@ -38,6 +39,7 @@ debug/moc_metodos_factorizacion.o
 debug/moc_metodos_interpolacion.o
 debug/moc_metodos_iterativos.o
 debug/moc_newton.o
+debug/moc_pivote_total.o
 debug/moc_pivote_parcial.o
 debug/moc_punto_fijo.o
 debug/moc_raizes_multiples.o

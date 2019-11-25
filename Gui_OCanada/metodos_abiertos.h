@@ -28,6 +28,8 @@ private slots:
 
     void on_mult_Raizes_clicked();
 
+    void on_back_clicked();
+
 private:
     Ui::Metodos_Abiertos *ui;
 };

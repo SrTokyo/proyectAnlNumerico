@@ -36,3 +36,8 @@ void Metodos_Abiertos::on_mult_Raizes_clicked()
     Raizes_Multiples *w = new Raizes_Multiples;
     w->show();
 }
+
+void Metodos_Abiertos::on_back_clicked()
+{
+    this->close();
+}

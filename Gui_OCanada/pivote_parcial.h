@@ -38,8 +38,6 @@ public:
     void imp_etapa();
     int etapa_counter;
     int vez;
-    explicit Pivote_Parcial(QWidget *parent = nullptr);
-    ~Pivote_Parcial();
 
 private slots:
     void on_bt_setAb_clicked();
