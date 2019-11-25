@@ -1,5 +1,5 @@
-#ifndef PIVOTE_PARCIAL_H
-#define PIVOTE_PARCIAL_H
+#ifndef PIVOTE_TOTAL_H
+#define PIVOTE_TOTAL_H
 
 #include <QWidget>
 #include <cstring>
@@ -13,17 +13,18 @@
 #include <string>
 #define DECIMALS 13
 
+
 namespace Ui {
-class Pivote_Parcial;
+class Pivote_Total;
 }
 
-class Pivote_Parcial : public QWidget
+class Pivote_Total : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit Pivote_Parcial(QWidget *parent = nullptr);
-    ~Pivote_Parcial();
+    explicit Pivote_Total(QWidget *parent = nullptr);
+    ~Pivote_Total();
     int n;
     double** matriz;
     double* vectorB;
@@ -38,8 +39,6 @@ public:
     void imp_etapa();
     int etapa_counter;
     int vez;
-    explicit Pivote_Parcial(QWidget *parent = nullptr);
-    ~Pivote_Parcial();
 
 private slots:
     void on_bt_setAb_clicked();
@@ -47,7 +46,7 @@ private slots:
     void on_solve_clicked();
 
 private:
-    Ui::Pivote_Parcial *ui;
+    Ui::Pivote_Total *ui;
 };
 
-#endif // PIVOTE_PARCIAL_H
+#endif // PIVOTE_TOTAL_H

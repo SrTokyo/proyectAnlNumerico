@@ -1,18 +1,19 @@
-#include "pivote_parcial.h"
-#include "ui_pivote_parcial.h"
+#include "pivote_total.h"
+#include "ui_pivote_total.h"
 
-Pivote_Parcial::Pivote_Parcial(QWidget *parent) :
+Pivote_Total::Pivote_Total(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::Pivote_Parcial)
+    ui(new Ui::Pivote_Total)
 {
     ui->setupUi(this);
 }
 
-Pivote_Parcial::~Pivote_Parcial()
+Pivote_Total::~Pivote_Total()
 {
     delete ui;
 }
-void Pivote_Parcial:: init(int m){
+
+void Pivote_Total:: init(int m){
     n = m;
     ui->tabla_A->setRowCount(n);
     ui->tabla_A->setColumnCount(n);
@@ -43,7 +44,7 @@ void Pivote_Parcial:: init(int m){
     etapa_counter = 0;
     vez = 0;
 }
-void Pivote_Parcial::on_bt_setAb_clicked()
+void Pivote_Total::on_bt_setAb_clicked()
 {
           for (int i = 0; i < n; i++)
                 for (int j = 0; j < n; j++)
@@ -52,7 +53,7 @@ void Pivote_Parcial::on_bt_setAb_clicked()
           for (int i = 0; i < n; i++)
                 vectorB[i] = ui->tabla_b->item(i,0)->text().toDouble();
 }
-void Pivote_Parcial:: solve(){
+void Pivote_Total:: solve(){
     imp_etapa();
     double z, w;
     if (matriz[0][0] == 0) { //AQUI verifica si el primer elemento de la matriz es distinto
@@ -103,18 +104,18 @@ void Pivote_Parcial:: solve(){
                     }
                 }
             }
-            imp_etapa();
             cont++;
+            imp_etapa();
         }
     }
 }
-void Pivote_Parcial::escribir_solucion()
+void Pivote_Total::escribir_solucion()
 {
     for (int i = 0; i < n; i++){
         ui->table_resolut->setItem(i,0,new QTableWidgetItem(QString::number(solvX[i],'f',DECIMALS)));
     }
 }
-void Pivote_Parcial::extraer_matriz() {
+void Pivote_Total::extraer_matriz() {
 
     for (int i = 0; i < n; i++)
     {
@@ -128,7 +129,7 @@ void Pivote_Parcial::extraer_matriz() {
         mAum[i][n] = vectorB[i];
     }
 }
-void Pivote_Parcial::imp_etapa(){
+void Pivote_Total::imp_etapa(){
         etapa_counter++;
         ui->tabla_solve->setItem((vez*n)+vez,0,new QTableWidgetItem(QString::fromStdString("Etapa")));
         ui->tabla_solve->setItem((vez*n)+vez,1,new QTableWidgetItem(QString::number(etapa_counter)));
@@ -143,7 +144,7 @@ void Pivote_Parcial::imp_etapa(){
         }
         vez++;
     }
-void Pivote_Parcial::resolver_sistema()
+void Pivote_Total::resolver_sistema()
 {
     int i;
     for ( i = n - 1; i >= 0; i--) {
@@ -155,7 +156,7 @@ void Pivote_Parcial::resolver_sistema()
         solvX[i] = (mAum[i][n] - sumatoria )/mAum[i][i];
     }
 }
-void Pivote_Parcial::on_solve_clicked()
+void Pivote_Total::on_solve_clicked()
 {
     solve();
     extraer_matriz();
