@@ -4,6 +4,7 @@
 #include <QFrame>
 #include <QInputDialog>
 #include "simple.h"
+#include "pivote_total.h"
 
 namespace Ui {
 class Eliminacion_Gaussiana;

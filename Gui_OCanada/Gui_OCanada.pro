@@ -36,6 +36,7 @@ SOURCES += \
     metodos_interpolacion.cpp \
     metodos_iterativos.cpp \
     newton.cpp \
+    pivote_total.cpp \
     punto_fijo.cpp \
     raizes_multiples.cpp \
     regla_falsa.cpp \
@@ -63,6 +64,7 @@ HEADERS += \
     metodos_interpolacion.h \
     metodos_iterativos.h \
     newton.h \
+    pivote_total.h \
     punto_fijo.h \
     raizes_multiples.h \
     regla_falsa.h \
@@ -83,6 +85,7 @@ FORMS += \
     metodos_interpolacion.ui \
     metodos_iterativos.ui \
     newton.ui \
+    pivote_total.ui \
     punto_fijo.ui \
     raizes_multiples.ui \
     regla_falsa.ui \
