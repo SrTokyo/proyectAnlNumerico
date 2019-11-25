@@ -1,16 +1,16 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'busqueda_incremental.h'
+** Meta object code from reading C++ file 'simple.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.6)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../Gui_OCanada/busqueda_incremental.h"
+#include "../../Gui_OCanada/simple.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'busqueda_incremental.h' doesn't include <QObject>."
+#error "The header file 'simple.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.12.6. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -20,29 +20,29 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_Busqueda_Incremental_t {
+struct qt_meta_stringdata_Simple_t {
     QByteArrayData data[4];
-    char stringdata0[64];
+    char stringdata0[45];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_Busqueda_Incremental_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_Simple_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_Busqueda_Incremental_t qt_meta_stringdata_Busqueda_Incremental = {
+static const qt_meta_stringdata_Simple_t qt_meta_stringdata_Simple = {
     {
-QT_MOC_LITERAL(0, 0, 20), // "Busqueda_Incremental"
-QT_MOC_LITERAL(1, 21, 21), // "on_bt_funcion_clicked"
-QT_MOC_LITERAL(2, 43, 0), // ""
-QT_MOC_LITERAL(3, 44, 19) // "on_bt_solve_clicked"
+QT_MOC_LITERAL(0, 0, 6), // "Simple"
+QT_MOC_LITERAL(1, 7, 19), // "on_bt_setAb_clicked"
+QT_MOC_LITERAL(2, 27, 0), // ""
+QT_MOC_LITERAL(3, 28, 16) // "on_solve_clicked"
 
     },
-    "Busqueda_Incremental\0on_bt_funcion_clicked\0"
-    "\0on_bt_solve_clicked"
+    "Simple\0on_bt_setAb_clicked\0\0"
+    "on_solve_clicked"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_Busqueda_Incremental[] = {
+static const uint qt_meta_data_Simple[] = {
 
  // content:
        8,       // revision
@@ -66,44 +66,44 @@ static const uint qt_meta_data_Busqueda_Incremental[] = {
        0        // eod
 };
 
-void Busqueda_Incremental::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void Simple::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<Busqueda_Incremental *>(_o);
+        auto *_t = static_cast<Simple *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_bt_funcion_clicked(); break;
-        case 1: _t->on_bt_solve_clicked(); break;
+        case 0: _t->on_bt_setAb_clicked(); break;
+        case 1: _t->on_solve_clicked(); break;
         default: ;
         }
     }
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject Busqueda_Incremental::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject Simple::staticMetaObject = { {
     &QWidget::staticMetaObject,
-    qt_meta_stringdata_Busqueda_Incremental.data,
-    qt_meta_data_Busqueda_Incremental,
+    qt_meta_stringdata_Simple.data,
+    qt_meta_data_Simple,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *Busqueda_Incremental::metaObject() const
+const QMetaObject *Simple::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *Busqueda_Incremental::qt_metacast(const char *_clname)
+void *Simple::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_Busqueda_Incremental.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_Simple.stringdata0))
         return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 
-int Busqueda_Incremental::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int Simple::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)

@@ -11,50 +11,70 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QFrame>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QTableWidget>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_Busqueda_Incremental
 {
 public:
-    QPushButton *done;
-    QPushButton *back;
-    QPushButton *intro_Termino;
-    QPushButton *intro_Operador;
+    QTableWidget *table_solve;
+    QWidget *layoutWidget;
+    QVBoxLayout *verticalLayout;
+    QPushButton *bt_funcion;
+    QPushButton *bt_solve;
+    QLabel *label;
+    QPlainTextEdit *plainTextEdit;
 
-    void setupUi(QFrame *Busqueda_Incremental)
+    void setupUi(QWidget *Busqueda_Incremental)
     {
         if (Busqueda_Incremental->objectName().isEmpty())
             Busqueda_Incremental->setObjectName(QString::fromUtf8("Busqueda_Incremental"));
         Busqueda_Incremental->resize(640, 480);
-        Busqueda_Incremental->setTabletTracking(false);
-        done = new QPushButton(Busqueda_Incremental);
-        done->setObjectName(QString::fromUtf8("done"));
-        done->setGeometry(QRect(150, 310, 75, 24));
-        back = new QPushButton(Busqueda_Incremental);
-        back->setObjectName(QString::fromUtf8("back"));
-        back->setGeometry(QRect(370, 310, 75, 24));
-        intro_Termino = new QPushButton(Busqueda_Incremental);
-        intro_Termino->setObjectName(QString::fromUtf8("intro_Termino"));
-        intro_Termino->setGeometry(QRect(150, 190, 75, 24));
-        intro_Operador = new QPushButton(Busqueda_Incremental);
-        intro_Operador->setObjectName(QString::fromUtf8("intro_Operador"));
-        intro_Operador->setGeometry(QRect(370, 190, 75, 24));
+        table_solve = new QTableWidget(Busqueda_Incremental);
+        table_solve->setObjectName(QString::fromUtf8("table_solve"));
+        table_solve->setGeometry(QRect(80, 200, 461, 271));
+        layoutWidget = new QWidget(Busqueda_Incremental);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(130, 90, 337, 111));
+        verticalLayout = new QVBoxLayout(layoutWidget);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        bt_funcion = new QPushButton(layoutWidget);
+        bt_funcion->setObjectName(QString::fromUtf8("bt_funcion"));
+
+        verticalLayout->addWidget(bt_funcion);
+
+        bt_solve = new QPushButton(layoutWidget);
+        bt_solve->setObjectName(QString::fromUtf8("bt_solve"));
+
+        verticalLayout->addWidget(bt_solve);
+
+        label = new QLabel(Busqueda_Incremental);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(10, 0, 191, 21));
+        plainTextEdit = new QPlainTextEdit(Busqueda_Incremental);
+        plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
+        plainTextEdit->setGeometry(QRect(30, 20, 561, 71));
 
         retranslateUi(Busqueda_Incremental);
 
         QMetaObject::connectSlotsByName(Busqueda_Incremental);
     } // setupUi
 
-    void retranslateUi(QFrame *Busqueda_Incremental)
+    void retranslateUi(QWidget *Busqueda_Incremental)
     {
-        Busqueda_Incremental->setWindowTitle(QApplication::translate("Busqueda_Incremental", "Busqueda Incremental", nullptr));
-        done->setText(QApplication::translate("Busqueda_Incremental", "Done", nullptr));
-        back->setText(QApplication::translate("Busqueda_Incremental", "back", nullptr));
-        intro_Termino->setText(QApplication::translate("Busqueda_Incremental", "Termino", nullptr));
-        intro_Operador->setText(QApplication::translate("Busqueda_Incremental", "Operador", nullptr));
+        Busqueda_Incremental->setWindowTitle(QApplication::translate("Busqueda_Incremental", "Form", nullptr));
+        bt_funcion->setText(QApplication::translate("Busqueda_Incremental", "Ingresar Funci\303\263n, X inicial, Delta y Maximo de iteraciones", nullptr));
+        bt_solve->setText(QApplication::translate("Busqueda_Incremental", "Solucionar", nullptr));
+        label->setText(QApplication::translate("Busqueda_Incremental", "ingregar funcion de esta forma :", nullptr));
+        plainTextEdit->setPlainText(QApplication::translate("Busqueda_Incremental", "numeros ([2.23e-308 hasta 1.79e308) , parentesis() , operadores(+,-,*,/) , seno(\" sen(valor) \") ,  coseno(\" cos(valor) \") , potencia(\"base ^ elevacion\") , raiz cuadrada(\" sqrt(valor) \") , exponencial(\" e(valor) \")", nullptr));
     } // retranslateUi
 
 };

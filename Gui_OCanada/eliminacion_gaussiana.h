@@ -2,6 +2,8 @@
 #define ELIMINACION_GAUSSIANA_H
 
 #include <QFrame>
+#include <QInputDialog>
+#include "simple.h"
 
 namespace Ui {
 class Eliminacion_Gaussiana;

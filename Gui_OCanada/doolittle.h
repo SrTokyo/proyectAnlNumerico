@@ -2,10 +2,14 @@
 #define DOOLITTLE_H
 
 #include <QWidget>
-#include <iostream>
-#include <stdlib.h>
+#include <math.h>
+#include <QLabel>
 #include <QLineEdit>
-using namespace std;
+#include <QTableWidget>
+#include <math.h>
+#include <stdlib.h>
+#include <string>
+
 namespace Ui {
 class Doolittle;
 }
@@ -30,6 +34,12 @@ public:
     void ejecucion();
     void init(int m);
 
+
+private slots:
+    void on_bt_setAb_clicked();
+
+    void on_solve_clicked();
+
 private:
     Ui::Doolittle *ui;
     int n;
@@ -42,7 +52,8 @@ private:
     double detL;
     double detU;
     double** mAum;
-    QLineEdit** vecQ;
+    int etapaConter;
+    int vez;
 
 
 

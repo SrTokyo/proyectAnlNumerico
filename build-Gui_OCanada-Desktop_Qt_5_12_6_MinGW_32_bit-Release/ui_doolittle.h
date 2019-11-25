@@ -11,8 +11,9 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -21,8 +22,8 @@ class Ui_Doolittle
 {
 public:
     QLabel *label;
-    QWidget *gridLayoutWidget;
-    QGridLayout *gridLayout;
+    QLabel *label_2;
+    QTableWidget *matrizA;
 
     void setupUi(QWidget *Doolittle)
     {
@@ -32,12 +33,13 @@ public:
         label = new QLabel(Doolittle);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(20, 20, 55, 16));
-        gridLayoutWidget = new QWidget(Doolittle);
-        gridLayoutWidget->setObjectName(QString::fromUtf8("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(20, 70, 441, 281));
-        gridLayout = new QGridLayout(gridLayoutWidget);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        gridLayout->setContentsMargins(0, 0, 0, 0);
+        label_2 = new QLabel(Doolittle);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(320, 20, 55, 16));
+        matrizA = new QTableWidget(Doolittle);
+        matrizA->setObjectName(QString::fromUtf8("matrizA"));
+        matrizA->setEnabled(true);
+        matrizA->setGeometry(QRect(20, 70, 256, 241));
 
         retranslateUi(Doolittle);
 
@@ -47,7 +49,8 @@ public:
     void retranslateUi(QWidget *Doolittle)
     {
         Doolittle->setWindowTitle(QApplication::translate("Doolittle", "Form", nullptr));
-        label->setText(QApplication::translate("Doolittle", "TextLabel", nullptr));
+        label->setText(QApplication::translate("Doolittle", "Matriz A", nullptr));
+        label_2->setText(QApplication::translate("Doolittle", "Vector b", nullptr));
     } // retranslateUi
 
 };

@@ -21,8 +21,10 @@ void Metodos_Factorizacion::on_crout_clicked()
 
 void Metodos_Factorizacion::on_doolittle_clicked()
 {
-    Menu_Doolittle *w = new Menu_Doolittle;
-    w->show();
+    int n = QInputDialog::getInt(this,"Entrada", "ingrese el valor de N * N  de la matriz");
+    Doolittle *s1 = new Doolittle;
+    s1->init(n);
+    s1->show();
 }
 
 void Metodos_Factorizacion::on_cholesky_clicked()

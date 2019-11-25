@@ -3,8 +3,9 @@
 
 #include <QFrame>
 #include "menu_cholesky.h"
-#include "menu_doolittle.h"
+#include "doolittle.h"
 #include "menu_crout.h"
+#include <QInputDialog>
 
 namespace Ui {
 class Metodos_Factorizacion;

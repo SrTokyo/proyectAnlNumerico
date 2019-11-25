@@ -2,6 +2,13 @@
 #define METODOS_CERRADOS_H
 
 #include <QFrame>
+#include <analizador/analizer.h>
+#include <QTableWidget>
+#include <QString>
+#include <QLabel>
+#include <QLineEdit>
+#include <QInputDialog>
+#include "biseccion.h"
 
 namespace Ui {
 class Metodos_Cerrados;

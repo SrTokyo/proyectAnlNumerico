@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>Metodos_Abiertos</class>
- <widget class="QFrame" name="Metodos_Abiertos">
+ <widget class="QWidget" name="Metodos_Abiertos">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,13 +11,13 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Frame</string>
+   <string>Form</string>
   </property>
   <widget class="QPushButton" name="back">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>390</y>
+     <x>400</x>
+     <y>370</y>
      <width>75</width>
      <height>24</height>
     </rect>
@@ -26,11 +26,11 @@
     <string>Back</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>120</y>
+     <x>110</x>
+     <y>100</y>
      <width>421</width>
      <height>211</height>
     </rect>

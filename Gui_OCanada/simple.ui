@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Doolittle</class>
- <widget class="QWidget" name="Doolittle">
+ <class>Simple</class>
+ <widget class="QWidget" name="Simple">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1045</width>
-    <height>578</height>
+    <width>1047</width>
+    <height>566</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,30 +26,17 @@
     <string>Matriz A</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QPushButton" name="solve">
    <property name="geometry">
     <rect>
-     <x>320</x>
+     <x>480</x>
      <y>20</y>
-     <width>55</width>
-     <height>16</height>
+     <width>75</width>
+     <height>24</height>
     </rect>
    </property>
    <property name="text">
-    <string>Vector b</string>
-   </property>
-  </widget>
-  <widget class="QTableWidget" name="tabla_A">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>70</y>
-     <width>256</width>
-     <height>241</height>
-    </rect>
+    <string>Solucionar</string>
    </property>
   </widget>
   <widget class="QPushButton" name="bt_setAb">
@@ -65,6 +52,19 @@
     <string>agregar Matriz A y vectos B</string>
    </property>
   </widget>
+  <widget class="QTableWidget" name="tabla_A">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>256</width>
+     <height>241</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QTableWidget" name="tabla_b">
    <property name="geometry">
     <rect>
@@ -72,16 +72,6 @@
      <y>70</y>
      <width>101</width>
      <height>241</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTableWidget" name="tabla_solve">
-   <property name="geometry">
-    <rect>
-     <x>470</x>
-     <y>60</y>
-     <width>531</width>
-     <height>271</height>
     </rect>
    </property>
   </widget>
@@ -98,19 +88,6 @@
     <string>Solución</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="solve">
-   <property name="geometry">
-    <rect>
-     <x>480</x>
-     <y>20</y>
-     <width>75</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Solucionar</string>
-   </property>
-  </widget>
   <widget class="QTableWidget" name="table_resolut">
    <property name="geometry">
     <rect>
@@ -119,6 +96,29 @@
      <width>531</width>
      <height>192</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tabla_solve">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>60</y>
+     <width>531</width>
+     <height>271</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>20</y>
+     <width>55</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Vector b</string>
    </property>
   </widget>
  </widget>

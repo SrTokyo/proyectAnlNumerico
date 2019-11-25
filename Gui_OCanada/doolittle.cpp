@@ -1,18 +1,7 @@
 #include "doolittle.h"
 #include "ui_doolittle.h"
-#include <iostream>
-#include <fstream>
-#include <math.h>
-#include <stdlib.h>
-#include <QGraphicsItem>
-#include <QLabel>
-#include <QTextEdit>
-#include <QLayoutItem>
-#include <QLayout>
-#include <QGraphicsGridLayout>
-#include <QGridLayout>
-#include <QScrollBar>
-#include <QLineEdit>
+
+
 
 Doolittle::Doolittle(QWidget *parent) :
     QWidget(parent),
@@ -28,14 +17,16 @@ Doolittle::~Doolittle()
 
 void Doolittle::init(int m)
     {
-        vecQ = new QLineEdit* [n];
-        ui->label->setText("Ingrese A");
-        for (int i = 0; i < n; i++){
-            vecQ[i] = new QLineEdit [n];
-            for (int j = 0; j < n; j++){
-                }
-        }
-        ui->gridLayoutWidget->repaint();
+    etapaConter= 0;
+    vez = 0;
+        ui->tabla_A->setRowCount(m);
+        ui->tabla_A->setColumnCount(m);
+        ui->tabla_b->setColumnCount(1);
+        ui->tabla_b->setRowCount(m);
+        ui->tabla_solve->setColumnCount(m*10);
+        ui->tabla_solve->setRowCount(m*10);
+        ui->table_resolut->setColumnCount(1);
+        ui->table_resolut->setRowCount(10);
         n = m;
         matrizA = new double* [n];
         for (int i = 0; i < n; i++)
@@ -70,33 +61,12 @@ void Doolittle::init(int m)
                     mAum[i][j] = 0;
     }
 void Doolittle::ingrese_matriz()
-    {   int k = 0;
+    {   for (int i = 0; i < n; i++)
+            for (int j = 0; j < n; j++)
+               matrizA[i][j] = ui->tabla_A->item(i,j)->text().toDouble();
 
         for (int i = 0; i < n; i++)
-            for (int j = 0; j < n; j++)
-                cin >> matrizA[i][j];
-        cout << "Ingrese el vector b :" << endl;
-        for (int i = 0; i < n; i++)
-            cin >> vectorB[i];
-    }
-void Doolittle::imp_Axb()
-    {
-        for (int i = 0; i < n; i++)
-        {
-            cout << "|\t";
-            for (int j = 0; j < n; j++)
-                cout << matrizA[i][j] << "\t";
-            cout << "|\t|\tx" << i + 1 << "\t|\t" << "|\t" << vectorB[i] << "\t|" << endl;
-        }
-    }
-void Doolittle::imp_mAum() {
-        for (int i = 0; i < n; i++)
-        {
-            cout << "|\t";
-            for (int j = 0; j < n; j++)
-                cout << mAum[i][j] << "\t | \t";
-            cout << endl;
-        }
+            vectorB[i] = ui->tabla_b->item(i,0)->text().toDouble();
     }
 void Doolittle::resolver_LU()
     {
@@ -127,9 +97,6 @@ void Doolittle::resolver_LU()
                 }
                 matrizU[k][j] = matrizA[k][j] - sum;
             }
-            cout << endl << endl;
-            cout << "\t Etapa " << k + 1 << endl;
-            cout << endl << endl;
             imp_etapaLU();
         }
 
@@ -163,70 +130,9 @@ void Doolittle::resolver_LU()
         }
         else
         {
-            cout << "Determinante 0, infinitas soluciones" << endl;
+             ui->tabla_solve->setItem(0,1,new QTableWidgetItem(QString::fromStdString("Determinante 0, infinitas soluciones")));
         }
-
-    }
-void Doolittle::definir_LU_total()
-    {
-        double z, w;
-        if (matrizA[0][0] == 0) { //AQUI verifica si el primer elemento de la matriz es distinto
-        //de cero si lo es cambia la fila por otra
-            for (int i = 1; i < n; i++)
-            {
-                w = vectorB[i];
-                vectorB[i] = vectorB[0];
-                vectorB[0] = w;
-                if (matrizA[i][0] != 0)
-                {
-                    for (int j = 0; j <= n; j++)
-                    {
-                        z = matrizA[i][j];
-
-                        matrizA[i][j] = matrizA[0][j];
-                        matrizA[0][j] = z;
-                    }
-                }
-            }
-        }
-        else {
-            int cont = 0;
-            while (cont <= n - 2)
-            {
-                double maxElement = 0;
-                for (int i = cont; i < n; i++) {
-                    for (int j = cont; j < n; j++) {
-                        if (matrizA[i][j] > maxElement) {
-                            maxElement = matrizA[i][j];
-
-                        }
-                    }
-                }
-                matrizA[cont][cont] = maxElement;
-
-                for (int i = 0; i < n; i++)
-                {
-                    if (i > cont) {
-                        double m = matrizA[i][cont] / matrizA[cont][cont];
-                        vectorB[i] = vectorB[i] - (m * vectorB[cont]);
-                        for (int j = 0; j < n; j++)
-                        {
-                            matrizL[i][j] = m;
-                            if (matrizA[i][j] != 0)
-                            {
-                                matrizA[i][j] = matrizA[i][j] - (m * matrizA[cont][j]);
-                            }
-                        }
-                    }
-                }
-                cont++;
-            }
-            for (int i = 0; i < n; i++)
-            {
-                matrizL[i][i] = 1;
-            }
-        }
-    }
+}
 void Doolittle::gen_matrizAumentada() {
         for (int i = 0; i < n; i++)
         {
@@ -243,8 +149,7 @@ void Doolittle::gen_matrizAumentada() {
 void Doolittle::definir_LU_simple()
     {
         double z, w;
-        if (matrizA[0][0] == 0) { //AQUI verifica si el primer elemento de la matriz es distinto
-        //de cero si lo es cambia la fila por otra
+        if (matrizA[0][0] == 0.0) {
             for (int i = 1; i < n; i++)
             {
                 w = vectorB[i];
@@ -274,7 +179,7 @@ void Doolittle::definir_LU_simple()
                         for (int j = 0; j < n; j++)
                         {
                             matrizL[i][j] = m;
-                            if (matrizA[i][j] != 0)
+                            if (matrizA[i][j] != 0.0)
                             {
                                 matrizA[i][j] = matrizA[i][j] - (m * matrizA[cont][j]);
                             }
@@ -304,27 +209,27 @@ void Doolittle::definir_LU_simple()
     }
 void Doolittle::escribir_solucion()
     {
-        cout << endl << endl;
-        for (int i = 0; i < n; i++)
-            cout << "x" << i + 1 << " = " << vectorX[i] << endl;
+    for (int j = 0; j < n; j++)
+         ui->table_resolut->setItem(j,0,new QTableWidgetItem(QString::number(vectorX[j])));
     }
 void Doolittle::imp_etapaLU() {
-        cout << "\t L = " << endl;
+    etapaConter++;
+    ui->tabla_solve->setItem((vez*n)+vez,0,new QTableWidgetItem(QString::fromStdString("Etapa")));
+     ui->tabla_solve->setItem((vez*n)+vez,1,new QTableWidgetItem(QString::number(etapaConter)));
         for (int i = 0; i < n; i++)
         {
-            cout << "|\t";
             for (int j = 0; j < n; j++)
-                cout << matrizL[i][j] << "\t\t\t | \t";
-            cout << endl;
+                 ui->tabla_solve->setItem(i+(etapaConter)+ (vez*n),j,new QTableWidgetItem(QString::number(matrizL[i][j])));
         }
-        cout << "\t U = " << endl;
+
         for (int i = 0; i < n; i++)
         {
-            cout << "|\t";
+
             for (int j = 0; j < n; j++)
-                cout << matrizU[i][j] << "\t\t\t | \t";
-            cout << endl;
+                ui->tabla_solve->setItem(i+(etapaConter)+ (vez*n),j+n+1,new QTableWidgetItem(QString::number(matrizU[i][j])));
+
         }
+        vez++;
 
     }
 void Doolittle::generar_U() {
@@ -336,15 +241,18 @@ void Doolittle::generar_U() {
             }
         }
     }
-void Doolittle::ejecucion()
-    {
-        this->ingrese_matriz();
-        this->gen_matrizAumentada();
-        this->imp_mAum();
-        this->definir_LU_simple();
-        this->generar_U();
-        this->imp_etapaLU();
-        this->resolver_LU();
-        this->escribir_solucion();
-    }
 
+void Doolittle::on_bt_setAb_clicked()
+{
+    ingrese_matriz();
+}
+
+void Doolittle::on_solve_clicked()
+{
+    gen_matrizAumentada();
+    definir_LU_simple();
+    generar_U();
+    imp_etapaLU();
+    resolver_LU();
+    escribir_solucion();
+}

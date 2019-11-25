@@ -1,42 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Busqueda_Incremental</class>
- <widget class="QWidget" name="Busqueda_Incremental">
+ <class>Punto_Fijo</class>
+ <widget class="QWidget" name="Punto_Fijo">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>640</width>
-    <height>480</height>
+    <height>496</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <widget class="QTableWidget" name="table_resoult">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>100</y>
+     <width>441</width>
+     <height>131</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QTableWidget" name="table_solve">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>200</y>
-     <width>461</width>
-     <height>271</height>
+     <x>10</x>
+     <y>240</y>
+     <width>611</width>
+     <height>241</height>
     </rect>
    </property>
   </widget>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>130</x>
+     <x>10</x>
      <y>90</y>
-     <width>337</width>
-     <height>111</height>
+     <width>161</width>
+     <height>151</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QPushButton" name="bt_funcion">
       <property name="text">
-       <string>Ingresar Función, X inicial, Delta y Maximo de iteraciones</string>
+       <string>Ingresar Valores</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="text">
+       <string>Tolerancia</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Error abs</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>Error relativo</string>
       </property>
      </widget>
     </item>
@@ -65,9 +96,9 @@
   <widget class="QPlainTextEdit" name="plainTextEdit">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>10</x>
      <y>20</y>
-     <width>561</width>
+     <width>611</width>
      <height>71</height>
     </rect>
    </property>

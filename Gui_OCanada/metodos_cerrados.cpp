@@ -16,7 +16,8 @@ Metodos_Cerrados::~Metodos_Cerrados()
 
 void Metodos_Cerrados::on_Biseccion_clicked()
 {
-
+    Biseccion *w = new Biseccion;
+    w->show();
 }
 
 void Metodos_Cerrados::on_regla_Falsa_clicked()
