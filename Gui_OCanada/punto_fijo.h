@@ -13,6 +13,7 @@
 #include <stdlib.h>
 #include <string>
 #include <analizador/analizer.h>
+#define DECIMALS 13
 
 namespace Ui {
 class Punto_Fijo;

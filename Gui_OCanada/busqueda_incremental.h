@@ -11,6 +11,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <string>
+#define DECIMALS 13
 
 
 namespace Ui {

@@ -9,6 +9,7 @@
 #include <QLineEdit>
 #include <QInputDialog>
 #include "biseccion.h"
+#include "regla_falsa.h"
 
 namespace Ui {
 class Metodos_Cerrados;

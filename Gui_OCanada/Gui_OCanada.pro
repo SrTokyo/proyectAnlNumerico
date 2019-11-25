@@ -35,7 +35,11 @@ SOURCES += \
     metodos_factorizacion.cpp \
     metodos_interpolacion.cpp \
     metodos_iterativos.cpp \
+    newton.cpp \
     punto_fijo.cpp \
+    raizes_multiples.cpp \
+    regla_falsa.cpp \
+    secante.cpp \
     simple.cpp
 
 HEADERS += \
@@ -58,7 +62,11 @@ HEADERS += \
     metodos_factorizacion.h \
     metodos_interpolacion.h \
     metodos_iterativos.h \
+    newton.h \
     punto_fijo.h \
+    raizes_multiples.h \
+    regla_falsa.h \
+    secante.h \
     simple.h
 
 FORMS += \
@@ -74,7 +82,11 @@ FORMS += \
     metodos_factorizacion.ui \
     metodos_interpolacion.ui \
     metodos_iterativos.ui \
+    newton.ui \
     punto_fijo.ui \
+    raizes_multiples.ui \
+    regla_falsa.ui \
+    secante.ui \
     simple.ui
 
 # Default rules for deployment.

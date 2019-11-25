@@ -52,12 +52,12 @@ void Busqueda_Incremental::on_bt_solve_clicked()
         }
         if (fx1 == 0.0) {
             ui->table_solve->setItem(0,0,new QTableWidgetItem(QString::fromStdString("x1 es una raiz")));
-            ui->table_solve->setItem(1,0,new QTableWidgetItem(QString::number(x1)));
+            ui->table_solve->setItem(1,0,new QTableWidgetItem(QString::number(x1,'f',DECIMALS)));
         }
         else if (fx0 * fx1 < 0) {
             ui->table_solve->setItem(0,0,new QTableWidgetItem(QString::fromStdString("Hay una reiz en el intervalo entre x1 y x0")));
-            ui->table_solve->setItem(1,0,new QTableWidgetItem(QString::number(x)));
-            ui->table_solve->setItem(2,0,new QTableWidgetItem(QString::number(x1)));
+            ui->table_solve->setItem(1,0,new QTableWidgetItem(QString::number(x,'f',DECIMALS)));
+            ui->table_solve->setItem(2,0,new QTableWidgetItem(QString::number(x1,'f',DECIMALS)));
             ui->table_solve->setItem(1,1,new QTableWidgetItem(QString::fromStdString("x0")));
             ui->table_solve->setItem(2,1,new QTableWidgetItem(QString::fromStdString("x1")));
         }

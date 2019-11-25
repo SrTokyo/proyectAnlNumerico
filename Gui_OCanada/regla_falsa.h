@@ -1,5 +1,5 @@
-#ifndef BISECCION_H
-#define BISECCION_H
+#ifndef REGLA_FALSA_H
+#define REGLA_FALSA_H
 
 #include <QWidget>
 #include <math.h>
@@ -13,15 +13,14 @@
 #include <stdlib.h>
 #include <string>
 #include <analizador/analizer.h>
+
 #define DECIMALS 13
 
-using namespace std;
-
 namespace Ui {
-class Biseccion;
+class Regla_Falsa;
 }
 
-class Biseccion : public QWidget
+class Regla_Falsa : public QWidget
 {
     Q_OBJECT
 
@@ -33,20 +32,20 @@ public:
     double tol;
     char* eType;
     double bisection();
-    explicit Biseccion(QWidget *parent = nullptr);
-    ~Biseccion();
+    explicit Regla_Falsa(QWidget *parent = nullptr);
+    ~Regla_Falsa();
 
 private slots:
-    void on_bt_funcion_clicked();
-
     void on_bt_solve_clicked();
 
     void on_pushButton_2_clicked();
 
     void on_pushButton_clicked();
 
+    void on_bt_funcion_clicked();
+
 private:
-    Ui::Biseccion *ui;
+    Ui::Regla_Falsa *ui;
 };
 
-#endif // BISECCION_H
+#endif // REGLA_FALSA_H

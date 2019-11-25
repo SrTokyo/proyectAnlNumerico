@@ -98,7 +98,7 @@ void Simple:: solve(){
 void Simple::escribir_solucion()
 {
     for (int i = 0; i < n; i++){
-        ui->table_resolut->setItem(i,0,new QTableWidgetItem(QString::number(solvX[i])));
+        ui->table_resolut->setItem(i,0,new QTableWidgetItem(QString::number(solvX[i],'f',DECIMALS)));
     }
 }
 void Simple::extraer_matriz() {
@@ -122,11 +122,11 @@ void Simple::imp_etapa(){
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < n; j++){
-                 ui->tabla_solve->setItem((i+(etapa_counter)+ (vez*n)),j,new QTableWidgetItem(QString::number(matriz[i][j])));
+                 ui->tabla_solve->setItem((i+(etapa_counter)+ (vez*n)),j,new QTableWidgetItem(QString::number(matriz[i][j],'f',DECIMALS)));
             }
         }
         for (int j = 0; j < n; j++){
-            ui->tabla_solve->setItem(j+(etapa_counter)+ (vez*n),n+2,new QTableWidgetItem(QString::number(vectorB[j])));
+            ui->tabla_solve->setItem(j+(etapa_counter)+ (vez*n),n+2,new QTableWidgetItem(QString::number(vectorB[j],'f',DECIMALS)));
         }
         vez++;
     }

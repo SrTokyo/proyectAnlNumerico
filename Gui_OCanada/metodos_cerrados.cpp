@@ -22,7 +22,8 @@ void Metodos_Cerrados::on_Biseccion_clicked()
 
 void Metodos_Cerrados::on_regla_Falsa_clicked()
 {
-
+    Regla_Falsa *w = new Regla_Falsa;
+    w->show();
 }
 
 void Metodos_Cerrados::on_back_clicked()

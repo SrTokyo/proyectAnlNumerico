@@ -210,7 +210,7 @@ void Doolittle::definir_LU_simple()
 void Doolittle::escribir_solucion()
     {
     for (int j = 0; j < n; j++)
-         ui->table_resolut->setItem(j,0,new QTableWidgetItem(QString::number(vectorX[j])));
+         ui->table_resolut->setItem(j,0,new QTableWidgetItem(QString::number(vectorX[j],'f',DECIMALS)));
     }
 void Doolittle::imp_etapaLU() {
     etapaConter++;
@@ -219,14 +219,14 @@ void Doolittle::imp_etapaLU() {
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < n; j++)
-                 ui->tabla_solve->setItem(i+(etapaConter)+ (vez*n),j,new QTableWidgetItem(QString::number(matrizL[i][j])));
+                 ui->tabla_solve->setItem(i+(etapaConter)+ (vez*n),j,new QTableWidgetItem(QString::number(matrizL[i][j],'f',DECIMALS)));
         }
 
         for (int i = 0; i < n; i++)
         {
 
             for (int j = 0; j < n; j++)
-                ui->tabla_solve->setItem(i+(etapaConter)+ (vez*n),j+n+1,new QTableWidgetItem(QString::number(matrizU[i][j])));
+                ui->tabla_solve->setItem(i+(etapaConter)+ (vez*n),j+n+1,new QTableWidgetItem(QString::number(matrizU[i][j],'f',DECIMALS)));
 
         }
         vez++;

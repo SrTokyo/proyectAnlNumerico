@@ -1,16 +1,16 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'metodos_abiertos.h'
+** Meta object code from reading C++ file 'raizes_multiples.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.6)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../Gui_OCanada/metodos_abiertos.h"
+#include "../../Gui_OCanada/raizes_multiples.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'metodos_abiertos.h' doesn't include <QObject>."
+#error "The header file 'raizes_multiples.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.12.6. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -20,32 +20,32 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_Metodos_Abiertos_t {
+struct qt_meta_stringdata_Raizes_Multiples_t {
     QByteArrayData data[6];
-    char stringdata0[100];
+    char stringdata0[106];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_Metodos_Abiertos_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_Raizes_Multiples_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_Metodos_Abiertos_t qt_meta_stringdata_Metodos_Abiertos = {
+static const qt_meta_stringdata_Raizes_Multiples_t qt_meta_stringdata_Raizes_Multiples = {
     {
-QT_MOC_LITERAL(0, 0, 16), // "Metodos_Abiertos"
-QT_MOC_LITERAL(1, 17, 21), // "on_punto_Fijo_clicked"
+QT_MOC_LITERAL(0, 0, 16), // "Raizes_Multiples"
+QT_MOC_LITERAL(1, 17, 21), // "on_bt_funcion_clicked"
 QT_MOC_LITERAL(2, 39, 0), // ""
-QT_MOC_LITERAL(3, 40, 17), // "on_newton_clicked"
-QT_MOC_LITERAL(4, 58, 18), // "on_secante_clicked"
-QT_MOC_LITERAL(5, 77, 22) // "on_mult_Raizes_clicked"
+QT_MOC_LITERAL(3, 40, 21), // "on_pushButton_clicked"
+QT_MOC_LITERAL(4, 62, 23), // "on_pushButton_2_clicked"
+QT_MOC_LITERAL(5, 86, 19) // "on_bt_solve_clicked"
 
     },
-    "Metodos_Abiertos\0on_punto_Fijo_clicked\0"
-    "\0on_newton_clicked\0on_secante_clicked\0"
-    "on_mult_Raizes_clicked"
+    "Raizes_Multiples\0on_bt_funcion_clicked\0"
+    "\0on_pushButton_clicked\0on_pushButton_2_clicked\0"
+    "on_bt_solve_clicked"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_Metodos_Abiertos[] = {
+static const uint qt_meta_data_Raizes_Multiples[] = {
 
  // content:
        8,       // revision
@@ -73,46 +73,46 @@ static const uint qt_meta_data_Metodos_Abiertos[] = {
        0        // eod
 };
 
-void Metodos_Abiertos::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void Raizes_Multiples::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<Metodos_Abiertos *>(_o);
+        auto *_t = static_cast<Raizes_Multiples *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_punto_Fijo_clicked(); break;
-        case 1: _t->on_newton_clicked(); break;
-        case 2: _t->on_secante_clicked(); break;
-        case 3: _t->on_mult_Raizes_clicked(); break;
+        case 0: _t->on_bt_funcion_clicked(); break;
+        case 1: _t->on_pushButton_clicked(); break;
+        case 2: _t->on_pushButton_2_clicked(); break;
+        case 3: _t->on_bt_solve_clicked(); break;
         default: ;
         }
     }
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject Metodos_Abiertos::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject Raizes_Multiples::staticMetaObject = { {
     &QWidget::staticMetaObject,
-    qt_meta_stringdata_Metodos_Abiertos.data,
-    qt_meta_data_Metodos_Abiertos,
+    qt_meta_stringdata_Raizes_Multiples.data,
+    qt_meta_data_Raizes_Multiples,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *Metodos_Abiertos::metaObject() const
+const QMetaObject *Raizes_Multiples::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *Metodos_Abiertos::qt_metacast(const char *_clname)
+void *Raizes_Multiples::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_Metodos_Abiertos.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_Raizes_Multiples.stringdata0))
         return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 
-int Metodos_Abiertos::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int Raizes_Multiples::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)

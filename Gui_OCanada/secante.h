@@ -1,8 +1,8 @@
-#ifndef BISECCION_H
-#define BISECCION_H
+#ifndef SECANTE_H
+#define SECANTE_H
 
 #include <QWidget>
-#include <math.h>
+#include <cmath>
 #include <cstring>
 #include <QTableWidget>
 #include <QString>
@@ -15,38 +15,32 @@
 #include <analizador/analizer.h>
 #define DECIMALS 13
 
-using namespace std;
-
 namespace Ui {
-class Biseccion;
+class Secante;
 }
 
-class Biseccion : public QWidget
+class Secante : public QWidget
 {
     Q_OBJECT
 
 public:
     double analizador(string f, double _X);
     string funcion;
-    double xi,xu;
+    double x,x1;
     int niter;
     double tol;
     char* eType;
-    double bisection();
-    explicit Biseccion(QWidget *parent = nullptr);
-    ~Biseccion();
-
+    double solve();
+    explicit Secante(QWidget *parent = nullptr);
+    ~Secante();
 private slots:
     void on_bt_funcion_clicked();
-
+    void on_pushButton_clicked();
+    void on_pushButton_2_clicked();
     void on_bt_solve_clicked();
 
-    void on_pushButton_2_clicked();
-
-    void on_pushButton_clicked();
-
 private:
-    Ui::Biseccion *ui;
+    Ui::Secante *ui;
 };
 
-#endif // BISECCION_H
+#endif // SECANTE_H

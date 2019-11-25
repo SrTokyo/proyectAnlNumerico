@@ -1,8 +1,8 @@
-#ifndef BISECCION_H
-#define BISECCION_H
+#ifndef RAIZES_MULTIPLES_H
+#define RAIZES_MULTIPLES_H
 
 #include <QWidget>
-#include <math.h>
+#include <cmath>
 #include <cstring>
 #include <QTableWidget>
 #include <QString>
@@ -15,38 +15,34 @@
 #include <analizador/analizer.h>
 #define DECIMALS 13
 
-using namespace std;
-
 namespace Ui {
-class Biseccion;
+class Raizes_Multiples;
 }
 
-class Biseccion : public QWidget
+class Raizes_Multiples : public QWidget
 {
     Q_OBJECT
 
 public:
     double analizador(string f, double _X);
-    string funcion;
-    double xi,xu;
+    string funcion,fprima, fprimaprima;
+    double x;
     int niter;
     double tol;
     char* eType;
-    double bisection();
-    explicit Biseccion(QWidget *parent = nullptr);
-    ~Biseccion();
+    double solve();
+    double nextXn(double p);
+    explicit Raizes_Multiples(QWidget *parent = nullptr);
+    ~Raizes_Multiples();
 
 private slots:
     void on_bt_funcion_clicked();
-
+    void on_pushButton_clicked();
+    void on_pushButton_2_clicked();
     void on_bt_solve_clicked();
 
-    void on_pushButton_2_clicked();
-
-    void on_pushButton_clicked();
-
 private:
-    Ui::Biseccion *ui;
+    Ui::Raizes_Multiples *ui;
 };
 
-#endif // BISECCION_H
+#endif // RAIZES_MULTIPLES_H

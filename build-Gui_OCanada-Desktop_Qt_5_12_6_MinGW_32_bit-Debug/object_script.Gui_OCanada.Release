@@ -17,7 +17,11 @@ release/metodos_cerrados.o
 release/metodos_factorizacion.o
 release/metodos_interpolacion.o
 release/metodos_iterativos.o
+release/newton.o
 release/punto_fijo.o
+release/raizes_multiples.o
+release/regla_falsa.o
+release/secante.o
 release/simple.o
 release/moc_biseccion.o
 release/moc_busqueda_incremental.o
@@ -31,5 +35,9 @@ release/moc_metodos_cerrados.o
 release/moc_metodos_factorizacion.o
 release/moc_metodos_interpolacion.o
 release/moc_metodos_iterativos.o
+release/moc_newton.o
 release/moc_punto_fijo.o
+release/moc_raizes_multiples.o
+release/moc_regla_falsa.o
+release/moc_secante.o
 release/moc_simple.o
