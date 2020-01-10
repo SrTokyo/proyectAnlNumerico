@@ -32,17 +32,17 @@ struct qt_meta_stringdata_Metodos_Abiertos_t {
 static const qt_meta_stringdata_Metodos_Abiertos_t qt_meta_stringdata_Metodos_Abiertos = {
     {
 QT_MOC_LITERAL(0, 0, 16), // "Metodos_Abiertos"
-QT_MOC_LITERAL(1, 17, 22), // "on_mult_Raizes_clicked"
-QT_MOC_LITERAL(2, 40, 0), // ""
-QT_MOC_LITERAL(3, 41, 17), // "on_newton_clicked"
-QT_MOC_LITERAL(4, 59, 21), // "on_punto_Fijo_clicked"
-QT_MOC_LITERAL(5, 81, 18), // "on_secante_clicked"
+QT_MOC_LITERAL(1, 17, 21), // "on_punto_Fijo_clicked"
+QT_MOC_LITERAL(2, 39, 0), // ""
+QT_MOC_LITERAL(3, 40, 17), // "on_newton_clicked"
+QT_MOC_LITERAL(4, 58, 18), // "on_secante_clicked"
+QT_MOC_LITERAL(5, 77, 22), // "on_mult_Raizes_clicked"
 QT_MOC_LITERAL(6, 100, 15) // "on_back_clicked"
 
     },
-    "Metodos_Abiertos\0on_mult_Raizes_clicked\0"
-    "\0on_newton_clicked\0on_punto_Fijo_clicked\0"
-    "on_secante_clicked\0on_back_clicked"
+    "Metodos_Abiertos\0on_punto_Fijo_clicked\0"
+    "\0on_newton_clicked\0on_secante_clicked\0"
+    "on_mult_Raizes_clicked\0on_back_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -82,10 +82,10 @@ void Metodos_Abiertos::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         auto *_t = static_cast<Metodos_Abiertos *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_mult_Raizes_clicked(); break;
+        case 0: _t->on_punto_Fijo_clicked(); break;
         case 1: _t->on_newton_clicked(); break;
-        case 2: _t->on_punto_Fijo_clicked(); break;
-        case 3: _t->on_secante_clicked(); break;
+        case 2: _t->on_secante_clicked(); break;
+        case 3: _t->on_mult_Raizes_clicked(); break;
         case 4: _t->on_back_clicked(); break;
         default: ;
         }
@@ -94,7 +94,7 @@ void Metodos_Abiertos::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
 }
 
 QT_INIT_METAOBJECT const QMetaObject Metodos_Abiertos::staticMetaObject = { {
-    &QFrame::staticMetaObject,
+    &QWidget::staticMetaObject,
     qt_meta_stringdata_Metodos_Abiertos.data,
     qt_meta_data_Metodos_Abiertos,
     qt_static_metacall,
@@ -113,12 +113,12 @@ void *Metodos_Abiertos::qt_metacast(const char *_clname)
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_Metodos_Abiertos.stringdata0))
         return static_cast<void*>(this);
-    return QFrame::qt_metacast(_clname);
+    return QWidget::qt_metacast(_clname);
 }
 
 int Metodos_Abiertos::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QFrame::qt_metacall(_c, _id, _a);
+    _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
